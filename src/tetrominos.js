@@ -1,82 +1,61 @@
 export const TETROMINOS = {
-    // 0 is used when not showing any tetrominos in the screen
-    // Tetrominos are the I,J,L,S,Z,T
-    0: {shape :[[0]], color : '0, 0, 0'},
-    I:{
-        shape:  [
-                    [0 ,'I',0,0],
-                    [0 ,'I',0,0],
-                    [0 ,'I',0,0],
-                    [0 ,'I',0,0]
-                
-                ],
-        color: '80,237,230',
-    },
-    J:{
-        shape:  [
-                    [0 ,'J',0],
-                    [0 ,'J',0],
-                    ['J','J',0]
-                
-                ],
-        color: '36,95,223',
-    },
-    L:{
-        shape:  [
-                    [0 ,'L',0],
-                    [0 ,'L',0],
-                    [0,'L','L']
-                
-                ],
-        color: '223,173,36',
-    },
-    O:{
-        shape:  [
-                    ['O' ,'O'],
-                    ['O' ,'O']
-                    
-                
-                ],
-        color: '223,217,36',
-    },
-    S:{
-        shape:  [
-                    [0 ,'S','S'],
-                    ['S' ,'S',0],
-                    [0,0,0]
-                
-                ],
-        color: '48,211,56',
-    },
-    T:{
-        shape:  [
-                    [0 ,0,0],
-                    ['T' ,'T','T'],
-                    [0,'T',0]
-                
-                ],
-        color: '132,61,198',
+  0: { shape: [[0]], color: '0, 0, 0' },
+  I: {
+    shape: [
+            [0, 'I', 0, 0], 
+            [0, 'I', 0, 0], 
+            [0, 'I', 0, 0], 
+            [0, 'I', 0, 0]],
+    
+    color: '255,99,71',
+  },
+  
+  J: { 
+      shape: [
+                [0, 'J', 0], 
+                [0, 'J', 0], 
+                ['J', 'J', 0]
+            ],
+             
+      color: '0,191,255' },
+  L: {
+    shape: [
+            [0, 'L', 0], 
+            [0, 'L', 0], 
+            [0, 'L', 'L']
+            ],
+    color: '255,255,0',
+  },
+  O: {
+       shape: [
+                ['O', 'O'], 
+                ['O', 'O']
+            ], 
+        color: '124,252,0' },
+  S: { 
+      shape: [
+          [0, 'S', 'S'], 
+          ['S', 'S', 0], 
+          [0, 0, 0]], 
+      color: '255,69,0' },
+  T: {
+    shape: [
+             [0, 0, 0], 
+             ['T', 'T', 'T'], 
+             [0, 'T', 0]],
+    color: '220,20,60',
+  },
+  Z: { 
+      shape: [
+                ['Z', 'Z', 0], 
+                [0, 'Z', 'Z'], 
+                [0, 0, 0]], 
+      color: '0,255,255' },
+};
 
-    },
-    Z:{
-        shape:  [
-                    ['Z' ,'Z',0],
-                    [0 ,'Z','Z'],
-                    [0,0,0]
-                
-                ],
-        color: '227,78,78',
-    },   
-}
-export const randomTetromino = () =>{
-    const tetrominos ='IJSTLZO';
-    // for selecting a random tetrominos from the string 
-    /* 
-        by selecting a random number which multipy by the length of the string
-        that will return one of the letters from the string
-
-      */
-    const randtetromino = tetrominos[Math.floor(Math.random()* tetrominos.length)]; 
-    return TETROMINOS[randtetromino];
-
-}
+export const randomTetromino = () => {
+  const tetrominos = 'IJLOSTZ';
+  const randTetromino =
+    tetrominos[Math.floor(Math.random() * tetrominos.length)];
+  return TETROMINOS[randTetromino];
+};
